@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Android Multi-Screen Apps</title>
+
+        <meta name="description" content="Multi Screen Support in Android UIs">
+        <meta name="author" content="Patrick Bashizi">
+
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="reveal/css/reveal.min.css">
+        <link rel="stylesheet" href="reveal/css/theme/sky.css" id="theme">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write('<link rel="stylesheet" href="reveal/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="reveal/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Android Multi Screen Apps</h1>
+
+                    <h3>G|Days 2014, DR Congo</h3>
+
+                    <p>
+                        <a href="http://google.com/+PatrickBashizi" target="_blank">Patrick Bashizi</a> / <a
+                            href="http://twitter.com/bashizip" target="_blank">@bashizip</a>
+                    </p>
+                </section>
+
+                <section>
+                    <p>
+                        [Diapos] <br/>
+                        Navigation : suivre les flèches dans le coin gauche. 
+                        <br/>Naviguez de droite à gauche et de haut en bas lorque les flèches verticales sont visibles.
+                    </p>
+                </section>
+                <section>
+                    <section>
+                        <h1>Le problème !</h1>
+                    </section>
+
+                    <section>
+                        <h1>Fabriquants</h1>
+                        <ul>
+                            <li>Acer</li>
+                            <li>Asus</li>
+                            <li>HTC</li>
+                            <li>LG</li>
+                            <li>Motorola</li>
+                            <li>Samsung</li>
+                            <li>Sony</li>
+                            <li>...</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Fragmentation</h2>
+                        <img src="img/manufacturers.png"/>
+                    </section>
+
+                    <section>
+                        <h1>Types de Terminaux</h1>
+
+                        <h2><span class="focus">11.868</span> Différents types terminaux vus en 2013 !</h2>
+
+                        <p>
+                            <a href="http://opensignal.com/reports/fragmentation-2013/fragmentation-2013.pdf">Open Signal
+                                Fragmentation Report 2013 (link to PDF)</a>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h1>Smartphones</h1>
+                        <img src="img/phones.jpg"/>
+                    </section>
+
+                    <section>
+                        <h1>Tablettes</h1>
+                        <img src="img/tablets.jpg"/>
+                    </section>
+
+                    <section>
+                        <h1>Laptops</h1>
+                        <img src="img/laptops.png"/>
+                    </section>
+
+                    <section>
+                        <h1>TV</h1>
+                        <img src="img/tv.png"/>
+                    </section>
+
+                    <section>
+                        <h1>Set-Top-Box</h1>
+                        <img src="img/stb.jpg"/>
+                    </section>
+
+                    <section>
+                        <h1>Consoles</h1>
+                        <img src="img/consoles.jpg"/>
+                    </section>
+                    <section>
+                        <h1>Montres</h1>
+                        <img src="img/wearables.jpg"/>
+                    </section>
+                    <section>
+                        <h2>Partout</h2>
+
+                        <h3>Internet of Things (IoT)?</h3>
+                        <img src="img/iot2.jpg"/>
+
+                        <p>
+                            <a href="http://www.businessweek.com/articles/2013-05-29/behind-the-internet-of-things-is-android-and-its-everywhere">Behind
+                                the 'Internet of Things' Is Android and It's Everywhere</a>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Taille & Résolution</h2>
+
+                        <p class="fragment roll-in">2.8 in, 3.2 in, 3.5 in, 3.6 in, 3.7 in, 4.0 in, 4.3 in, 4.5 in, 4.7 in, 4.8
+                            in, 5.0 in, 6.4 in, 7.0, 9.7 in, 10.1 in, ...</p>
+
+                        <p class="fragment roll-in">320x240 QVGA, 480x320 HVGA, 800x480 WVGA, 960x540 qHD, 1280x768 WXGA,
+                            1280x720 HD, 1920x1080 HD, ...</p>
+                        <img class="fragment roll-in" src="img/screen_sizes.png"/>
+                    </section>
+
+                    <section>
+                        <h1>API Versions</h1>
+                        <img src="img/versions.png"/>
+
+                        <p>
+                            <a href="http://developer.android.com/about/dashboards/index.html">Android Dashboards</a>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h1>Orientation</h1>
+
+                        <h2>Paysage ou Portrait?</h2>
+                    </section>
+
+                    <section data-background="img/bugdroid.jpg">
+                        <h2 class="drogba">Keep Calm</h2>
+
+                        <h2 class="drogba">and</h2>
+
+                        <h1 class="drogba">Trust Android Engineers</h1>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Supporter</h1>
+
+                        <h1>Multiples tailles d'écrans</h1>
+                    </section>
+
+                    <section>
+                        <h2>Plage des tailles  Supportés</h2>
+                        <ul>
+                            <li><span class="focus">sizes:</span> small, normal, large, and xlarge</li>
+                            <li><span class="focus">densities:</span> ldpi (low), mdpi (medium), hdpi (high),
+                                and xhdpi (extra high)
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2> Classement des Tailles et Densités 
+                            <img src="img/screens_ranges.png"/>
+                    </section>
+
+                    <section>
+                        <h2>Density-independent Pixel (dp)</h2>
+
+                        <p>
+                            Une <span class="focus">unité virtuelle de mesure de pixels</span> que vous devriez utiliser lors de la définition des layouts de votre UI, pour exprimer
+                            les tailles des layouts ou les positions  de façon <span class="focus">indépendante des densités</span>.
+                        </p>
+
+                        <p>
+                            Le <span class="focus">density-independent pixel (dp) </span> est équivalent à<span
+                                class="focus">un pixel physique</span>
+                            sur un écran de <span class="focus">160 dpi</span> (medium density)
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Conversion</h2>
+
+                        <h3><span class="focus">px = dp * (dpi / 160)</span></h3>
+                        <h4>Ex: Sur un écran à 240 dpi, 1 dp equal à 1.5 pixels physiques</h4>
+                    </section>
+
+                    <section>
+                        <h2>L'indépendence à la Densité</h2>
+
+                        <p>
+                            Elle  <span class="focus">preserve</span> la <span class="focus">taille physique </span> des éléments de l'interface
+                            lorsqu'ils sont affichés sur des écrans  avec <span class="focus">differente densites</span>
+                        </p>
+
+                        <ul>
+                            <li>Le systeme rédimensionne les <span class="focus">unités dp</span> de façon appropriée pour la densité 
+                                de l'écran courrent 
+                            </li>
+                            <li>Le systeme <span class="focus">redimensionne les resources "drawable" </span> à la taille 
+                                appropriée , basée sur la densité courrante, si nécessaire
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2><span class="alert">Mauvais</span></h2>
+                        <img src="img/density_bad.png"/>
+
+                        <h2><span class="success">Bon</span></h2>
+                        <img src="img/density_good.png"/>
+                    </section>
+
+                    <section>
+                        <h2>Comment supporter multiples écrans?</h2>
+                    </section>
+
+                    <section>
+                        <h2>Utiliser <span class="focus">&lt;supports-screen&gt;</span>
+                        </h2>
+
+                        <p>Explicitement declarer dans le  Manifest quelles tailles d'écran votre application supporte </p>
+                        <img src="img/supports_screen.png"/>
+                    </section>
+
+                    <section>
+                        <h2>Fournir differents layouts pour differentes tailles d'ecrans</h2>
+                        <ul>
+                            <li>
+                                Fournir des resources spécifiques aux tailles: <span class="focus">small</span>, <span class="focus">normal</span>,
+                                <span class="focus">large</span>, and <span class="focus">xlarge</span>
+                                <ul>
+                                    <li>Ex: <span class="focus">layout-xlarge/</span></li>
+                                </ul>
+                            </li>
+                            <li>Utiliser le <span class="focus">sw&lt;N&gt;dp</span> qualificateur de configuration  pour
+                                definir la largeur la plus petite disponible  (depuis API 13)
+                                <ul>
+                                    <li>Ex: <span class="focus">layout-sw600dp/</span> (uniquement 600dp screen width)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Fournir des  bitmaps differentes </h2>
+                        <ul>
+                            <li>
+                                Par défaut, Android rédimensione les drawables (<span class="focus">.png</span>, <span class="focus">.jpg</span>,
+                                <span class="focus">.gif</span> et <span class="focus">.9.png</span> files)
+                            </li>
+
+                            <li>Inclure <span class="focus">des versions alternatives</span>
+                                pour <span class="focus">differentes resolutions</span> pour <span
+                                    class="focus">différentes  densités d'écran</span>
+                            </li>
+                            <li>
+                                Les resources spécifiques aux densités sont <span class="focus">ldpi</span> (low), <span class="focus">mdpi</span>
+                                (medium), <span class="focus">hdpi</span> (high), and <span class="focus">xhdpi</span> (extra high)
+                                <ul>
+                                    <li>Ex: <span class="focus">drawable-hdpi/</span></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Configuration Qualifiers</h2>
+
+                        <h3>Usage: <span class="focus">&lt;resources_name&gt;-&lt;qualifier&gt;</span></h3>
+                        <ul>
+                            <li>
+                                <span class="focus">&lt;resources_name&gt;</span> est le nom standard de resource (comme <span
+                                    class="focus">drawable</span> ou <span class="focus">layout</span>)
+                            </li>
+
+                            <li>
+                                <span class="focus">&lt;qualifier&gt;</span> est une configuration qualifier (comme <span
+                                    class="focus">hdpi</span>
+                                or <span class="focus">xlarge</span>)
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Layouts & Drawables</h2>
+                        <img src="img/cq.png"/>
+                    </section>
+
+                    <section>
+                        <h2>Drawables Alternatifs</h2>
+                        <ul>
+                            <li>
+                                Yous n'aurez qu'à fournir les resources spécifiques à chaque densité(<span class="focus">.png</span>, <span
+                                    class="focus">.jpg</span>, <span class="focus">.gif</span> or <span class="focus">.9.png</span>)
+                            </li>
+
+                            <li>
+                                Suivant les taux <span class="focus">3:4:6:8</span>  d'expension entre les 4 densités de base
+                                <ul>
+                                    <li>36x36 pour low-density</li>
+                                    <li>48x48 pour  medium-density</li>
+                                    <li>72x72 pour  high-density</li>
+                                    <li>96x96 pour extra high-density</li>
+                                </ul>
+                            </li>
+                            <li>Voir <a
+                                    href="http://developer.android.com/guide/practices/ui_guidelines/icon_design.html">Icon Design
+                                    Guideline</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Tailles Relatives</h2>
+                        <img src="img/screens_densities.png"/>
+                    </section>
+
+                    <section>
+                        <h2>Layouts des Tablettes pour Android 3.2</h2>
+
+                        <p>Android 3.2 a introduit une nouvelle façon de spécifier les resources pour <span class="focus"> davantage de tailles discrètes d'écrans</span>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Nouveaux Qualificateurs de tailles</h2>
+                        <ul>
+                            <li>
+                                smallestWidth: <span class="focus">sw&lt;N&gt;dp</span>
+                                <ul>
+                                    <li>Ex: <span class="focus">sw600dp</span></li>
+                                </ul>
+                            </li>
+                            <li>Largeur disponible d'écran: <span class="focus">w&lt;N&gt;dp</span>
+                                <ul>
+                                    <li>Ex: <span class="focus">w1024dp</span></li>
+                                </ul>
+                            </li>
+                            <li>Hauteur disponible d'écran: <span class="focus">h&lt;N&gt;dp</span>
+                                <ul>
+                                    <li>Ex: <span class="focus">h720dp</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Examples de Configuration </h2>
+                        <img src="img/sw.png"/>
+                        <img src="img/aw.png"/>
+                    </section>
+
+                    <section>
+                        <h1>Bonnes Pratiques</h1>
+                    </section>
+
+                    <section>
+                        <h2>1. Utiliser <span class="focus">wrap_content</span>, <span class="focus">match_parent</span>, ou l'unité <span
+                                class="focus">dp</span> pour la dimension des layouts</h2>
+
+                        <p>Utiliser <span class="focus">wrap_content</span>, <span class="focus">match_parent</span> ou <span class="focus">dp </span>
+                            guaranti que que la taille appropiée est fournie à la view sur l'écran courant</p>
+
+                        <p>PS: Utiliser <span class="focus">sp</span> pour les tailles des fontes</p>
+                    </section>
+
+                    <section>
+                        <h2>2. Ne pas utiliser des valeurs en  pixels codés en dur dans le code de votre application</h2>
+                    </section>
+
+                    <section>
+                        <h2>3. Utiliser RelativeLayout</h2>
+
+                        <p>Il utilise <span class="focus"> le positiotionement  relatif</span> pour placer ses vues filles</p>
+
+                        <p>Par ex, vous pouvez spécifier que qu'un Button doit se trouver <span class="focus">"à la droite d'un"</span> TexteView
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>4. Utiliser des resources spécifiques à la taille et à la densité</h2>
+                        <img src="img/drawable_qualifiers.png"/>
+
+                        <p>PS: Pour éviter le pre-redimensionement, placer la resource dans un dossier de resources avec le qualificateur de configuration <span class="focus">nodpi</span>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>5. Utiliser les  Nine-patch Bitmaps</h2>
+                        <p>Ils sont généralement formattés comme des fichier PNG qui peuvent indiquer quels zones <span
+                                class="focus">peuvent ou pas être étirées</span></p>
+                        <img src="img/nine_patch.png"/>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Tablettes</h1>
+
+                        <h1>&</h1>
+
+                        <h1>Smartphones</h1>
+                    </section>
+
+                    <section>
+                        <h1>Lignes directrices</h1>
+                    </section>
+
+                    <section>
+                        <h2>1. Construire les design des vos  Activities basé sur  les <span class="focus">Fragments</span></h2>
+                    </section>
+
+                    <section>
+                        <h1>Fragment</h1>
+                        <ul>
+                            <li>Introduit depuis Android 3.0 (API Level 11)</li>
+                            <li>Il permet de séparé les composants distincts de votre UI en parties distintes
+                            </li>
+                            <li>Permet un développement  <span class="focus">modulaire</span> des UI</li>
+                            <li>PS: Utiliser Android <a
+                                    href="http://developer.android.com/tools/support-library/index.html">Support Libraries</a> pour utiliser
+                                les fragments dans  les versions antérieures d'Android 
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Multiple Fragments, Multiple Activities</h2>
+                        <img src="img/fragments.png"/>
+                    </section>
+
+                    <section>
+                        <h2>Smartphones</h2>
+
+                        <p><span class="focus">res/layout/main.xml</span></p>
+                        <img src="img/handset.png"/>
+                    </section>
+
+                    <section>
+                        <h2>Tablettes</h2>
+
+                        <p><span class="focus">res/layout-large/main.xml</span></p>
+                        <img src="img/tablet.png"/>
+
+                        <p>PS: Utiliser le qualificateur de taille <span class="focus">minimum width</span> pour mieux contrôler la 
+                            taille de l'écran</p>
+                    </section>
+
+                    <section>
+                        <h2>Comment ça marche?</h2>
+                        <ul>
+                            <li>Si le Fragment B est dans le layout, l'Activity A notifie le Fragment B de se mettre à jour
+                            </li>
+                            <li>Si le  Fragment B n'est pas dans le layout, l'Activity A demarre l'Activity B (qui contient le
+                                Fragment B)
+                            </li>
+                            <li> Note Importante: <span class="focus">Definir une interface de  callback  dans chaque classe de fragment</span>
+                                pour communiquer avec l'activity hôte
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>2. Utiliser le  <span class="focus">Action Bar</span></h2>
+
+                        <p>Le Action bar permet d'identifier a  position de l'utilisateur</span>, et  fournit des actions</span> en plus des 
+                            navigation modes</span></p>
+                        <img src="img/actionbar.png"/>
+
+                        <p>Introduit dans Android 3.0 (API Level 11). Toutefois, vous ne pouvez pas l'utiliser en usant de Android <a
+                                href="http://developer.android.com/tools/support-library/index.html">Support Libraries</a></p>
+                    </section>
+
+                    <section>
+                        <h2>Pourquoi Action Bar?</h2>
+
+                        <p>Le System Android fait  fait tout le travail pour <span class="focus">gracieusement adapter le action bar</span> pour <span
+                                class="focus">differentes tailles d'écrans</span></p>
+                        <img class="fragment roll-in" src="img/ab_wide_narrow.png"/>
+                    </section>
+
+                    <section>
+                        <h2>Astuces pour créer un <span class="focus">Action Bar</span></h2>
+                    </section>
+
+                    <section>
+                        <h2>1. Eviter d'utiliser  la valeur <span class="focus">always</span></h2>
+                        <ul>
+                            <li>En forçant les items à toujours être visible, vous encombrez votre 
+                            </li>
+                            <li>Les actions items risquent de cacher le titre ou d'autres items de navigation
+                            </li>
+                            <li>Utiliser  <span class="focus">ifRoom</span> pour l'attribut <span class="focus">android:showAsAction</span>
+
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>2. Fournir une  <span class="focus">Icone</span></h2>
+                        <ul>
+                            <li>Toujours fournir une icone pour les actions items</li>
+                            <li>Utiliser <span class="focus">showAsAction="ifRoom|withText"</span></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>3. Fournir un <span class="focus">Titre</span></h2>
+                        <ul>
+                            <li>Toujours fournir un titre</li>
+                            <li>Les utilisateurs  verront le titre comme un  <span class="focus">tooltip</span> au long click</li>
+                            <li>C'est critique pour l' <span class="focus">accessibilité</span>:Les lecteurs d'écrans lisent à haute voix le 
+                                titre du menu même quand il est invisible.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>4. Eviter d'utiliser des navigation mode  customisés quand c'est possible</h2>
+                        <ul>
+                            <li>Utiliser les tab et drop-down navigation modes prédéfinis</li>
+                            <li>Le système va adapter leurs presentation selon la taille de l'écran automatiquement
+                                <ul>
+                                    <li>Ex: <span class="focus">Stacked action bar</span> sur les phones</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Split Action Bar</h2>
+                        <ul>
+                            <li>Disponible dans Android 4.0 (API level 14) et supérieur</li>
+                            <li>Ajouter <span class="focus">uiOptions="splitActionBarWhenNarrow"</span> à votre
+                                <span class="focus">&lt;activity&gt;</span> ou au manifest <span class="focus">&lt;application&gt;</span> 
+                            </li>
+                            <li>Appeler <span class="focus">setDisplayShowHomeEnabled(false)</span> pour desactiver 
+                                l'icone de l'application dans l'action bar
+                            </li>
+                        </ul>
+                        <img src="img/split_ab.png"/>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Comment Tester</h1>
+                    </section>
+
+                    <section>
+                        <h2>Utiliser plusieurs configs de l'Emulator </h2>
+
+                        <p><span class="focus">emulator -avd &lt;avd_name&gt; -scale 96dpi</span></p>
+                        <img src="img/emulator.png"/>
+                    </section>
+
+                    <section>
+                        <h2>Android Studio</h2>
+
+                        <p>Previews prédéfinis (paysage and portrait modes)</p>
+                        <img src="img/android_studio.png"/>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Compatibilité</h1>
+
+                        <p>La caractéristique la plus importante d'un terminal compatible est la possibilité d'<span class="focus">installer</span>  et
+                            <span class="focus">correctement exécuter</span>  un fichier .apk
+
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Apps Availability</h2>
+
+                        <h3><span class="focus">&lt;uses-feature&gt;</span> dans le fichier manifest</h3>
+                        <pre>
+                    <code class="xml" contenteditable="false" data-trim>
+&lt;uses-feature android:name="android.hardware.bluetooth" /&gt;
+&lt;uses-feature android:name="android.hardware.camera" /&gt;
+                    </code>
+                        </pre>
+
+                        <p>
+                            Les autres <span class="focus">filtres</span> for la disponibilté des applications dans Google Play:
+                        <ul>
+                            <li>&lt;supports-gl-texture&gt;</li>
+                            <li>&lt;uses-configuration&gt;</li>
+                            <li>&lt;uses-library&gt;</li>
+                            <li>&lt;uses-permission&gt;</li>
+                            <li>&lt;uses-sdk&gt;</li>
+                        </ul>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Package Manager</h2>
+                        <h3>Vérifier la disponibilté d'une fonctionnalité à l'exécution</h3>
+                        <pre>
+                    <code class="java" contenteditable="false" data-trim>
+PackageManager packageManager = this.getPackageManager();
+if (packageManager.hasSystemFeature(PackageManager.FEATURE_NFC)) {
+    Log.d(TAG, "Oh yeah, NFC is available. :)");
+} else {
+    Log.d(TAG, "Shit, no NFC. :(");
+}
+                    </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h1>Business Reasons</h1>
+                        <ul>
+                            <li>Lister les pays dans lesquels l'app est disponible</li>
+                            <li>Selectionner depuis quel opérateur les utilisateurs peuvent accéder à l'app</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Slides</h1>
+                        <a href="https://github.com/accavdar/MultiScreenHell"
+                           target="_blank">http://github.com/accavdar/MultiScreenHell</a>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Questions?</h1>
+                </section>
+
+                <section>
+                    <section data-transition="linear" data-background="#4d7e65"
+                             data-background-transition="slide">
+                        <h1>THE END</h1>
+
+                        <h3 class="inverted">by Patrick Bashizi / <a href="http://twitter.com/bashizip"
+                                                                           target="_blank">@bashizip</a>
+                        </h3>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <script src="reveal/lib/js/head.min.js"></script>
+        <script src="reveal/js/reveal.min.js"></script>
+
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                dependencies: [
+                    {src: 'reveal/lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'reveal/plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'reveal/plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'reveal/plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                ]
+            });
+        </script>
+    </body>
+</html>
