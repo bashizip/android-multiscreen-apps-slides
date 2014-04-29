@@ -6,3 +6,4 @@ Crédits
 --------
 
 Ces slides ont été traduites et completées  basé sur celles à cette adresse : http://github.com/accavdar/MultiScreenHell
+Merci à Abdullah Cetin CAVDAR .
